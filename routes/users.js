@@ -10,8 +10,5 @@ const { getUsuarios } = require('../controllers/users');
 const router = Router();
 
 
-router.get('/', validarJWT, (req, res) => {
-    // Your logic goes here
-    // Make sure to send a response back to the client
-  });
+router.get('/', validarJWT, getUsuarios);
 module.exports = router;

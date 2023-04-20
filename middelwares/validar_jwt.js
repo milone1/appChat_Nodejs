@@ -16,10 +16,11 @@ const validarJWT = ( req, res, next ) => {
 
         const { uid } = jwt.verify( token, process.env.JWT_KEY );
         req.uid = uid;
-        
+        console.log('realia el next;')
         next();
 
     } catch (error) {
+        console.log('open catch')
         return res.status(401).json({
             ok: false,
             msg: 'Token no válido'

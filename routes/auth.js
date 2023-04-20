@@ -9,13 +9,13 @@ const router = Router();
 router.post('/new', [
     check('nombre', 'El nombre es obligatorio').not().isEmpty(),
     check('password', 'La contrasena es obligatoria').not().isEmpty(),
-    check('email', 'El co=mapo emial is requerido').isEmail(),
+    check('email', 'El coampo email es requerido.').isEmail(),
     validarCampos
 ], crearUsuario)
 
 router.post('/',[
     check('password', 'La contrasena es obligatoria').not().isEmpty(),
-    check('email', 'El co=mapo emial is requerido').isEmail(),
+    check('email', 'El campo email es requerido').isEmail(),
 ], login)
 
 router.post('/renew',validarJWT,renewToken)

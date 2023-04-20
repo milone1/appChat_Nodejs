@@ -12,7 +12,7 @@ const MensajeSchema = Schema({
         ref: 'Usuario',
         required: true
     },
-    mensaje: {
+    message: {
         type: String,
         required: true
     }
@@ -28,4 +28,4 @@ MensajeSchema.method('toJSON', function() {
 
 
 
-module.exports = model('Mensaje', MensajeSchema );
+module.exports = model('Message', MensajeSchema );
